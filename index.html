@@ -16,6 +16,17 @@
         
         <script src="app.js" defer></script> <!-- Then load app.js -->
     </head>
+    <!-- Vue App -->
+    <div id="app" class="container my-5">
+        <header>
+            <h2 v-text="sitename"></h2>
+            <button v-show="currentPage === 'browse'" v-on:click="currentPage = 'checkout'">
+                🛒 Checkout {{ cartCount }}
+            </button>
+            <button v-show="currentPage === 'checkout'" v-on:click="currentPage = 'browse'">🌐 Browse</button>
+            <hr>
+        </header>
+
     
 <body></body>
 </html>
